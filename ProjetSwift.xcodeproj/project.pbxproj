@@ -15,6 +15,8 @@
 		7D7313D7203B21DC000FD9F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7313D5203B21DC000FD9F7 /* LaunchScreen.storyboard */; };
 		7D7313E2203B21DC000FD9F7 /* ProjetSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7313E1203B21DC000FD9F7 /* ProjetSwiftTests.swift */; };
 		7D7313ED203B21DC000FD9F7 /* ProjetSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7313EC203B21DC000FD9F7 /* ProjetSwiftUITests.swift */; };
+		AC5074A2203B2378005060FB /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5074A1203B2378005060FB /* Patient.swift */; };
+		AC5074A3203B2378005060FB /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5074A1203B2378005060FB /* Patient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		7D7313E8203B21DC000FD9F7 /* ProjetSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjetSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7313EC203B21DC000FD9F7 /* ProjetSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetSwiftUITests.swift; sourceTree = "<group>"; };
 		7D7313EE203B21DC000FD9F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC5074A1203B2378005060FB /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,7 @@
 				7D7313D5203B21DC000FD9F7 /* LaunchScreen.storyboard */,
 				7D7313D8203B21DC000FD9F7 /* Info.plist */,
 				7D7313D0203B21DC000FD9F7 /* ProjetSwift.xcdatamodeld */,
+				AC5074A1203B2378005060FB /* Patient.swift */,
 			);
 			path = ProjetSwift;
 			sourceTree = "<group>";
@@ -263,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D7313D2203B21DC000FD9F7 /* ProjetSwift.xcdatamodeld in Sources */,
+				AC5074A2203B2378005060FB /* Patient.swift in Sources */,
 				7D7313CC203B21DC000FD9F7 /* ViewController.swift in Sources */,
 				7D7313CA203B21DC000FD9F7 /* AppDelegate.swift in Sources */,
 			);
@@ -273,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D7313E2203B21DC000FD9F7 /* ProjetSwiftTests.swift in Sources */,
+				AC5074A3203B2378005060FB /* Patient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +517,7 @@
 				7D7313F3203B21DC000FD9F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D7313F4203B21DC000FD9F7 /* Build configuration list for PBXNativeTarget "ProjetSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +526,7 @@
 				7D7313F6203B21DC000FD9F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D7313F7203B21DC000FD9F7 /* Build configuration list for PBXNativeTarget "ProjetSwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +535,7 @@
 				7D7313F9203B21DC000FD9F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
