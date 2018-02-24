@@ -15,8 +15,30 @@
 		7D7313D7203B21DC000FD9F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7313D5203B21DC000FD9F7 /* LaunchScreen.storyboard */; };
 		7D7313E2203B21DC000FD9F7 /* ProjetSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7313E1203B21DC000FD9F7 /* ProjetSwiftTests.swift */; };
 		7D7313ED203B21DC000FD9F7 /* ProjetSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7313EC203B21DC000FD9F7 /* ProjetSwiftUITests.swift */; };
-		AC5074A2203B2378005060FB /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5074A1203B2378005060FB /* Patient.swift */; };
-		AC5074A3203B2378005060FB /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5074A1203B2378005060FB /* Patient.swift */; };
+		ACF5BB522041A64900ABEFFD /* Utilisateur.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB512041A64900ABEFFD /* Utilisateur.swift */; };
+		ACF5BB532041A64900ABEFFD /* Utilisateur.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB512041A64900ABEFFD /* Utilisateur.swift */; };
+		ACF5BB552041A96E00ABEFFD /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB542041A96E00ABEFFD /* Contact.swift */; };
+		ACF5BB562041A96E00ABEFFD /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB542041A96E00ABEFFD /* Contact.swift */; };
+		ACF5BB582041AC0F00ABEFFD /* Rappel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB572041AC0F00ABEFFD /* Rappel.swift */; };
+		ACF5BB592041AC0F00ABEFFD /* Rappel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB572041AC0F00ABEFFD /* Rappel.swift */; };
+		ACF5BB5B2041AE2C00ABEFFD /* Evenement.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB5A2041AE2C00ABEFFD /* Evenement.swift */; };
+		ACF5BB5C2041AE2C00ABEFFD /* Evenement.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB5A2041AE2C00ABEFFD /* Evenement.swift */; };
+		ACF5BB612041B1CA00ABEFFD /* Medicament.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB602041B1CA00ABEFFD /* Medicament.swift */; };
+		ACF5BB622041B1CA00ABEFFD /* Medicament.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB602041B1CA00ABEFFD /* Medicament.swift */; };
+		ACF5BB642041B3CB00ABEFFD /* Prescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB632041B3CB00ABEFFD /* Prescription.swift */; };
+		ACF5BB652041B3CB00ABEFFD /* Prescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB632041B3CB00ABEFFD /* Prescription.swift */; };
+		ACF5BB6A2041BCDA00ABEFFD /* RendezVous.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB692041BCDA00ABEFFD /* RendezVous.swift */; };
+		ACF5BB6B2041BCDA00ABEFFD /* RendezVous.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB692041BCDA00ABEFFD /* RendezVous.swift */; };
+		ACF5BB6D2041BDA700ABEFFD /* Evaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB6C2041BDA700ABEFFD /* Evaluation.swift */; };
+		ACF5BB6E2041BDA700ABEFFD /* Evaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB6C2041BDA700ABEFFD /* Evaluation.swift */; };
+		ACF5BB702041BEB500ABEFFD /* Questionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB6F2041BEB500ABEFFD /* Questionnaire.swift */; };
+		ACF5BB712041BEB500ABEFFD /* Questionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB6F2041BEB500ABEFFD /* Questionnaire.swift */; };
+		ACF5BB792041C53600ABEFFD /* Synthese.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB782041C53600ABEFFD /* Synthese.swift */; };
+		ACF5BB7A2041C53600ABEFFD /* Synthese.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB782041C53600ABEFFD /* Synthese.swift */; };
+		ACF5BB7F2041C64000ABEFFD /* Activité.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB7E2041C64000ABEFFD /* Activité.swift */; };
+		ACF5BB802041C64000ABEFFD /* Activité.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB7E2041C64000ABEFFD /* Activité.swift */; };
+		ACF5BB822041C87500ABEFFD /* ExercicePhysique.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB812041C87500ABEFFD /* ExercicePhysique.swift */; };
+		ACF5BB832041C87500ABEFFD /* ExercicePhysique.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB812041C87500ABEFFD /* ExercicePhysique.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +73,18 @@
 		7D7313E8203B21DC000FD9F7 /* ProjetSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjetSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7313EC203B21DC000FD9F7 /* ProjetSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetSwiftUITests.swift; sourceTree = "<group>"; };
 		7D7313EE203B21DC000FD9F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AC5074A1203B2378005060FB /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		ACF5BB512041A64900ABEFFD /* Utilisateur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilisateur.swift; sourceTree = "<group>"; };
+		ACF5BB542041A96E00ABEFFD /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		ACF5BB572041AC0F00ABEFFD /* Rappel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rappel.swift; sourceTree = "<group>"; };
+		ACF5BB5A2041AE2C00ABEFFD /* Evenement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evenement.swift; sourceTree = "<group>"; };
+		ACF5BB602041B1CA00ABEFFD /* Medicament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicament.swift; sourceTree = "<group>"; };
+		ACF5BB632041B3CB00ABEFFD /* Prescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prescription.swift; sourceTree = "<group>"; };
+		ACF5BB692041BCDA00ABEFFD /* RendezVous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendezVous.swift; sourceTree = "<group>"; };
+		ACF5BB6C2041BDA700ABEFFD /* Evaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evaluation.swift; sourceTree = "<group>"; };
+		ACF5BB6F2041BEB500ABEFFD /* Questionnaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questionnaire.swift; sourceTree = "<group>"; };
+		ACF5BB782041C53600ABEFFD /* Synthese.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synthese.swift; sourceTree = "<group>"; };
+		ACF5BB7E2041C64000ABEFFD /* Activité.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activité.swift"; sourceTree = "<group>"; };
+		ACF5BB812041C87500ABEFFD /* ExercicePhysique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercicePhysique.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +142,18 @@
 				7D7313D5203B21DC000FD9F7 /* LaunchScreen.storyboard */,
 				7D7313D8203B21DC000FD9F7 /* Info.plist */,
 				7D7313D0203B21DC000FD9F7 /* ProjetSwift.xcdatamodeld */,
-				AC5074A1203B2378005060FB /* Patient.swift */,
+				ACF5BB512041A64900ABEFFD /* Utilisateur.swift */,
+				ACF5BB542041A96E00ABEFFD /* Contact.swift */,
+				ACF5BB572041AC0F00ABEFFD /* Rappel.swift */,
+				ACF5BB5A2041AE2C00ABEFFD /* Evenement.swift */,
+				ACF5BB602041B1CA00ABEFFD /* Medicament.swift */,
+				ACF5BB632041B3CB00ABEFFD /* Prescription.swift */,
+				ACF5BB692041BCDA00ABEFFD /* RendezVous.swift */,
+				ACF5BB6C2041BDA700ABEFFD /* Evaluation.swift */,
+				ACF5BB6F2041BEB500ABEFFD /* Questionnaire.swift */,
+				ACF5BB782041C53600ABEFFD /* Synthese.swift */,
+				ACF5BB7E2041C64000ABEFFD /* Activité.swift */,
+				ACF5BB812041C87500ABEFFD /* ExercicePhysique.swift */,
 			);
 			path = ProjetSwift;
 			sourceTree = "<group>";
@@ -266,10 +310,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACF5BB6A2041BCDA00ABEFFD /* RendezVous.swift in Sources */,
+				ACF5BB642041B3CB00ABEFFD /* Prescription.swift in Sources */,
 				7D7313D2203B21DC000FD9F7 /* ProjetSwift.xcdatamodeld in Sources */,
-				AC5074A2203B2378005060FB /* Patient.swift in Sources */,
+				ACF5BB582041AC0F00ABEFFD /* Rappel.swift in Sources */,
+				ACF5BB612041B1CA00ABEFFD /* Medicament.swift in Sources */,
+				ACF5BB702041BEB500ABEFFD /* Questionnaire.swift in Sources */,
+				ACF5BB7F2041C64000ABEFFD /* Activité.swift in Sources */,
 				7D7313CC203B21DC000FD9F7 /* ViewController.swift in Sources */,
+				ACF5BB552041A96E00ABEFFD /* Contact.swift in Sources */,
 				7D7313CA203B21DC000FD9F7 /* AppDelegate.swift in Sources */,
+				ACF5BB5B2041AE2C00ABEFFD /* Evenement.swift in Sources */,
+				ACF5BB6D2041BDA700ABEFFD /* Evaluation.swift in Sources */,
+				ACF5BB822041C87500ABEFFD /* ExercicePhysique.swift in Sources */,
+				ACF5BB792041C53600ABEFFD /* Synthese.swift in Sources */,
+				ACF5BB522041A64900ABEFFD /* Utilisateur.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,8 +332,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACF5BB6E2041BDA700ABEFFD /* Evaluation.swift in Sources */,
+				ACF5BB832041C87500ABEFFD /* ExercicePhysique.swift in Sources */,
+				ACF5BB6B2041BCDA00ABEFFD /* RendezVous.swift in Sources */,
+				ACF5BB622041B1CA00ABEFFD /* Medicament.swift in Sources */,
+				ACF5BB7A2041C53600ABEFFD /* Synthese.swift in Sources */,
+				ACF5BB562041A96E00ABEFFD /* Contact.swift in Sources */,
 				7D7313E2203B21DC000FD9F7 /* ProjetSwiftTests.swift in Sources */,
-				AC5074A3203B2378005060FB /* Patient.swift in Sources */,
+				ACF5BB712041BEB500ABEFFD /* Questionnaire.swift in Sources */,
+				ACF5BB652041B3CB00ABEFFD /* Prescription.swift in Sources */,
+				ACF5BB802041C64000ABEFFD /* Activité.swift in Sources */,
+				ACF5BB5C2041AE2C00ABEFFD /* Evenement.swift in Sources */,
+				ACF5BB532041A64900ABEFFD /* Utilisateur.swift in Sources */,
+				ACF5BB592041AC0F00ABEFFD /* Rappel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
