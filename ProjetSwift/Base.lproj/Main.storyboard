@@ -21,47 +21,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dr-9A-eMY">
-                                <rect key="frame" x="34" y="454" width="97" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gew-Wg-ORV">
+                                <rect key="frame" x="254" y="378" width="56" height="30"/>
+                                <state key="normal" title="Docteur"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UiY-lX-op2">
-                                <rect key="frame" x="145" y="317" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Myf-zM-XEY">
+                                <rect key="frame" x="170" y="378" width="34" height="30"/>
+                                <state key="normal" title="Infos"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UiY-lX-op2">
+                                <rect key="frame" x="145" y="318" width="85" height="30"/>
                                 <state key="normal" title="Médicament"/>
                                 <connections>
                                     <segue destination="79w-nA-axC" kind="show" id="Hvl-eg-nzj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gew-Wg-ORV">
-                                <rect key="frame" x="244" y="465" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dr-9A-eMY">
+                                <rect key="frame" x="29" y="373" width="91" height="41"/>
+                                <state key="normal" title="Rendez-Vous"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZg-ww-U1C">
-                                <rect key="frame" x="139" y="503" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Myf-zM-XEY">
-                                <rect key="frame" x="164" y="355" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZg-ww-U1C">
+                                <rect key="frame" x="168" y="438" width="38" height="30"/>
+                                <state key="normal" title="Sport"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gew-Wg-ORV" firstAttribute="leading" secondItem="Myf-zM-XEY" secondAttribute="trailing" constant="50" id="0pT-fB-7G3"/>
+                            <constraint firstItem="Myf-zM-XEY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2F8-2Q-yKa"/>
+                            <constraint firstItem="CZg-ww-U1C" firstAttribute="top" secondItem="Myf-zM-XEY" secondAttribute="bottom" constant="30" id="QoI-gy-7Gk"/>
+                            <constraint firstItem="CZg-ww-U1C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cIV-su-76R"/>
+                            <constraint firstItem="Myf-zM-XEY" firstAttribute="leading" secondItem="1dr-9A-eMY" secondAttribute="trailing" constant="50" id="h3m-D2-cXY"/>
+                            <constraint firstItem="1dr-9A-eMY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="309" id="hXG-1g-A3Y"/>
+                            <constraint firstItem="UiY-lX-op2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hsU-45-Xwv"/>
+                            <constraint firstItem="gew-Wg-ORV" firstAttribute="baseline" secondItem="Myf-zM-XEY" secondAttribute="baseline" id="iBe-ak-mQ0"/>
+                            <constraint firstItem="UiY-lX-op2" firstAttribute="centerX" secondItem="Myf-zM-XEY" secondAttribute="centerX" id="lS5-1u-9rg"/>
+                            <constraint firstItem="1dr-9A-eMY" firstAttribute="centerY" secondItem="Myf-zM-XEY" secondAttribute="centerY" id="n5K-YL-jfj"/>
+                            <constraint firstItem="UiY-lX-op2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qNr-2r-bmA"/>
+                            <constraint firstItem="UiY-lX-op2" firstAttribute="centerX" secondItem="CZg-ww-U1C" secondAttribute="centerX" id="rmW-AR-u9G"/>
+                            <constraint firstItem="Myf-zM-XEY" firstAttribute="top" secondItem="UiY-lX-op2" secondAttribute="bottom" constant="30" id="yRH-Mb-hWR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="57f-yj-ZoL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="671" y="-85"/>
+            <point key="canvasLocation" x="669.60000000000002" y="-85.007496251874073"/>
         </scene>
-        <!--View Controller-->
+        <!--Medicament View Controller-->
         <scene sceneID="UTN-qX-a0b">
             <objects>
-                <viewController id="79w-nA-axC" sceneMemberID="viewController">
+                <viewController id="79w-nA-axC" customClass="MedicamentViewController" customModule="ProjetSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="REC-XL-VOk"/>
                         <viewControllerLayoutGuide type="bottom" id="4T4-uG-m3U"/>
@@ -70,20 +80,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Izt-xb-r0V">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Izt-xb-r0V">
                                 <rect key="frame" x="166" y="80" width="37" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVo-ak-WuV">
+                                <rect key="frame" x="163" y="176" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="uT9-TU-e5F"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4T4-uG-m3U" firstAttribute="top" secondItem="GVo-ak-WuV" secondAttribute="bottom" constant="470" id="PIt-9m-hx5"/>
+                            <constraint firstItem="GVo-ak-WuV" firstAttribute="leading" secondItem="kln-Ss-6y1" secondAttribute="leading" constant="163" id="gwT-EV-iGs"/>
+                            <constraint firstItem="GVo-ak-WuV" firstAttribute="top" secondItem="Izt-xb-r0V" secondAttribute="bottom" constant="75" id="r4p-8V-4N7"/>
+                            <constraint firstItem="GVo-ak-WuV" firstAttribute="centerX" secondItem="Izt-xb-r0V" secondAttribute="centerX" id="rG4-XH-nmc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelMedoc" destination="GVo-ak-WuV" id="SGa-d6-OIc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cvY-oO-iFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1510" y="-85"/>
+            <point key="canvasLocation" x="1509.5999999999999" y="-85.007496251874073"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jVo-8U-BB2">
