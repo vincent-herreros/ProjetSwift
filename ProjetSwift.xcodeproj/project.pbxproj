@@ -21,6 +21,8 @@
 		7D8372FF20459C9400ECE31B /* EvenementSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8372FD20459C9400ECE31B /* EvenementSet.swift */; };
 		7D8373212045A9E900ECE31B /* PrescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8373202045A9E900ECE31B /* PrescriptionViewController.swift */; };
 		7D8373222045A9E900ECE31B /* PrescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8373202045A9E900ECE31B /* PrescriptionViewController.swift */; };
+		7D9BF7022045C0BB00E631CE /* Activité.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9BF7012045C0BB00E631CE /* Activité.swift */; };
+		7D9BF7032045C0BB00E631CE /* Activité.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9BF7012045C0BB00E631CE /* Activité.swift */; };
 		ACF5BB522041A64900ABEFFD /* Utilisateur.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB512041A64900ABEFFD /* Utilisateur.swift */; };
 		ACF5BB532041A64900ABEFFD /* Utilisateur.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB512041A64900ABEFFD /* Utilisateur.swift */; };
 		ACF5BB552041A96E00ABEFFD /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB542041A96E00ABEFFD /* Contact.swift */; };
@@ -41,8 +43,6 @@
 		ACF5BB712041BEB500ABEFFD /* Questionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB6F2041BEB500ABEFFD /* Questionnaire.swift */; };
 		ACF5BB792041C53600ABEFFD /* Synthese.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB782041C53600ABEFFD /* Synthese.swift */; };
 		ACF5BB7A2041C53600ABEFFD /* Synthese.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB782041C53600ABEFFD /* Synthese.swift */; };
-		ACF5BB7F2041C64000ABEFFD /* Activité.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB7E2041C64000ABEFFD /* Activité.swift */; };
-		ACF5BB802041C64000ABEFFD /* Activité.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB7E2041C64000ABEFFD /* Activité.swift */; };
 		ACF5BB822041C87500ABEFFD /* ExercicePhysique.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB812041C87500ABEFFD /* ExercicePhysique.swift */; };
 		ACF5BB832041C87500ABEFFD /* ExercicePhysique.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB812041C87500ABEFFD /* ExercicePhysique.swift */; };
 /* End PBXBuildFile section */
@@ -82,6 +82,7 @@
 		7D8372F72045988000ECE31B /* PrescriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		7D8372FD20459C9400ECE31B /* EvenementSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvenementSet.swift; sourceTree = "<group>"; };
 		7D8373202045A9E900ECE31B /* PrescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrescriptionViewController.swift; sourceTree = "<group>"; };
+		7D9BF7012045C0BB00E631CE /* Activité.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Activité.swift"; sourceTree = "<group>"; };
 		ACF5BB512041A64900ABEFFD /* Utilisateur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilisateur.swift; sourceTree = "<group>"; };
 		ACF5BB542041A96E00ABEFFD /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		ACF5BB572041AC0F00ABEFFD /* Rappel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rappel.swift; sourceTree = "<group>"; };
@@ -92,7 +93,6 @@
 		ACF5BB6C2041BDA700ABEFFD /* Evaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evaluation.swift; sourceTree = "<group>"; };
 		ACF5BB6F2041BEB500ABEFFD /* Questionnaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questionnaire.swift; sourceTree = "<group>"; };
 		ACF5BB782041C53600ABEFFD /* Synthese.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synthese.swift; sourceTree = "<group>"; };
-		ACF5BB7E2041C64000ABEFFD /* Activité.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activité.swift"; sourceTree = "<group>"; };
 		ACF5BB812041C87500ABEFFD /* ExercicePhysique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercicePhysique.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,9 +144,10 @@
 		7D7313C8203B21DB000FD9F7 /* ProjetSwift */ = {
 			isa = PBXGroup;
 			children = (
+				7D9BF7012045C0BB00E631CE /* Activité.swift */,
+				7D9BF6FA2045B66800E631CE /* Controlleur */,
 				7D83730720459F8200ECE31B /* CoreData */,
 				7D7313C9203B21DC000FD9F7 /* AppDelegate.swift */,
-				7D7313CB203B21DC000FD9F7 /* ViewController.swift */,
 				7D7313CD203B21DC000FD9F7 /* Main.storyboard */,
 				7D7313D3203B21DC000FD9F7 /* Assets.xcassets */,
 				7D7313D5203B21DC000FD9F7 /* LaunchScreen.storyboard */,
@@ -163,10 +164,7 @@
 				ACF5BB6C2041BDA700ABEFFD /* Evaluation.swift */,
 				ACF5BB6F2041BEB500ABEFFD /* Questionnaire.swift */,
 				ACF5BB782041C53600ABEFFD /* Synthese.swift */,
-				ACF5BB7E2041C64000ABEFFD /* Activité.swift */,
 				ACF5BB812041C87500ABEFFD /* ExercicePhysique.swift */,
-				7D8372F72045988000ECE31B /* PrescriptionTableViewCell.swift */,
-				7D8373202045A9E900ECE31B /* PrescriptionViewController.swift */,
 			);
 			path = ProjetSwift;
 			sourceTree = "<group>";
@@ -194,6 +192,16 @@
 			children = (
 			);
 			name = CoreData;
+			sourceTree = "<group>";
+		};
+		7D9BF6FA2045B66800E631CE /* Controlleur */ = {
+			isa = PBXGroup;
+			children = (
+				7D8372F72045988000ECE31B /* PrescriptionTableViewCell.swift */,
+				7D8373202045A9E900ECE31B /* PrescriptionViewController.swift */,
+				7D7313CB203B21DC000FD9F7 /* ViewController.swift */,
+			);
+			name = Controlleur;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,7 +375,6 @@
 				7D7313E2203B21DC000FD9F7 /* ProjetSwiftTests.swift in Sources */,
 				ACF5BB712041BEB500ABEFFD /* Questionnaire.swift in Sources */,
 				ACF5BB652041B3CB00ABEFFD /* Prescription.swift in Sources */,
-				ACF5BB802041C64000ABEFFD /* Activité.swift in Sources */,
 				ACF5BB5C2041AE2C00ABEFFD /* Evenement.swift in Sources */,
 				ACF5BB532041A64900ABEFFD /* Utilisateur.swift in Sources */,
 				ACF5BB592041AC0F00ABEFFD /* Rappel.swift in Sources */,
