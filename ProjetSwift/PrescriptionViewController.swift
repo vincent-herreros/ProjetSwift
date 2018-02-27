@@ -1,16 +1,16 @@
 //
-//  MedicamentViewController.swift
+//  PrescriptionViewController.swift
 //  ProjetSwift
 //
-//  Created by Sheena Maucuer on 27/02/2018.
+//  Created by Vincent HERREROS on 27/02/2018.
 //  Copyright © 2018 Vincent HERREROS. All rights reserved.
 //
 
 import UIKit
 
-class MedicamentViewController: UIViewController {
+class PrescriptionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    @IBOutlet weak var labelMedoc: UILabel!
+    @IBOutlet weak var prescriptionTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,7 +22,13 @@ class MedicamentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        
+    }
     /*
     // MARK: - Navigation
 
