@@ -17,3 +17,4 @@ class Questionnaire: Evenement {
         super.init(rappelEvenement: rappelEvenement)
     }
 }
+

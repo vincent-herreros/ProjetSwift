@@ -17,6 +17,7 @@ class Activité: Evenement {
         self.dateActivité=dateActivité
         self.nom=nom
         super.init(rappelEvenement: rappelEvenement)
+        
     }
     
 }
