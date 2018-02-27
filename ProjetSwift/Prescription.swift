@@ -18,7 +18,7 @@ class Prescription: Evenement {
     var intervalle : Int?
 
 
-    init(rappelEvenement:Rappel,medicament:Medicament,dateDebutPrescription:Date,dateFinPrescription:Date,heurePrecise:Date){
+    init(rappelEvenement:Rappel,medicament:Medicaments,dateDebutPrescription:Date,dateFinPrescription:Date,heurePrecise:Date){
         
         self.medicament=medicament
         self.dateFinPrescription=dateFinPrescription
@@ -27,7 +27,7 @@ class Prescription: Evenement {
         super.init(rappelEvenement : rappelEvenement)
     }
     
-    init(rappelEvenement:Rappel,medicament:Medicament,dateDebutPrescription:Date,dateFinPrescription:Date,heureDebut:Date,heureFin:Date,intervalle:Int){
+    init(rappelEvenement:Rappel,medicament:Medicaments,dateDebutPrescription:Date,dateFinPrescription:Date,heureDebut:Date,heureFin:Date,intervalle:Int){
         
         self.medicament=medicament
         self.dateDebutPrescription=dateDebutPrescription

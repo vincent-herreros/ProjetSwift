@@ -8,7 +8,7 @@
 
 import Foundation
 
-class EvenementSet : Sequence {
+/*class EvenementSet : Sequence {
     fileprivate var eset : [Evenement] = []
     
     @discardableResult
@@ -31,4 +31,4 @@ class EvenementSet : Sequence {
 struct ItEvenementSet{
     private var current: Int = 0
     private let set : EvenementSet
-}
+}*/

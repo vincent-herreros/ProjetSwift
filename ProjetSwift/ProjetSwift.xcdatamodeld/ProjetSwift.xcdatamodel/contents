@@ -27,9 +27,9 @@
         <relationship name="evenement" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Evenements" inverseName="rappel" inverseEntity="Evenements" syncable="YES"/>
     </entity>
     <elements>
+        <element name="Evenements" positionX="351" positionY="-333" width="128" height="73"/>
         <element name="Medicaments" positionX="-81" positionY="-370" width="128" height="118"/>
         <element name="Prescriptions" positionX="135" positionY="-396" width="128" height="163"/>
-        <element name="Evenements" positionX="351" positionY="-333" width="128" height="73"/>
         <element name="Rappels" positionX="585" positionY="-324" width="128" height="88"/>
     </elements>
 </model>

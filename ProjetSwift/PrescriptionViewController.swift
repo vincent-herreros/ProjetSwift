@@ -9,7 +9,9 @@
 import UIKit
 
 class PrescriptionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
+    var names : [String] = ["tata", "toto"]
+    
     @IBOutlet weak var prescriptionTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +25,13 @@ class PrescriptionViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        
+        let cell = self.prescriptionTable.dequeueReusableCell(withIdentifier: "prescriptionCell", for: indexPath) as! PrescriptionTableViewCell
+        cell.nomMedoc.text = self.names[indexPath.row]
+        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        
+        return self.names.count
     }
     /*
     // MARK: - Navigation
