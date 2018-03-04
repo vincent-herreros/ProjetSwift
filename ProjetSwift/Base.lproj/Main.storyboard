@@ -29,26 +29,26 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gew-Wg-ORV">
                                 <rect key="frame" x="204" y="377" width="121" height="121"/>
-                                <state key="normal" image="RDV.png"/>
+                                <state key="normal" image="RDV"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UiY-lX-op2">
                                 <rect key="frame" x="44" y="377" width="99" height="99"/>
-                                <state key="normal" image="pillulier.png"/>
+                                <state key="normal" image="pillulier"/>
                                 <connections>
                                     <segue destination="79w-nA-axC" kind="show" id="Hvl-eg-nzj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dr-9A-eMY">
                                 <rect key="frame" x="46" y="510" width="95" height="129"/>
-                                <state key="normal" image="medecin.png"/>
+                                <state key="normal" image="medecin"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZg-ww-U1C">
                                 <rect key="frame" x="204" y="528" width="111" height="111"/>
-                                <state key="normal" image="activitephysique.png"/>
+                                <state key="normal" image="activitephysique"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Myf-zM-XEY">
                                 <rect key="frame" x="138" y="459" width="64" height="80"/>
-                                <state key="normal" image="info.png"/>
+                                <state key="normal" image="info"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -186,7 +186,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO.png" translatesAutoresizingMaskIntoConstraints="NO" id="pbO-Jl-O3N">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="pbO-Jl-O3N">
                                 <rect key="frame" x="67" y="144" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="3x2-eU-1s0"/>
@@ -225,11 +225,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LOGO.png" width="900" height="900"/>
-        <image name="RDV.png" width="274" height="274"/>
-        <image name="activitephysique.png" width="274" height="274"/>
-        <image name="info.png" width="274" height="274"/>
-        <image name="medecin.png" width="274" height="274"/>
-        <image name="pillulier.png" width="274" height="274"/>
+        <image name="LOGO" width="450" height="450"/>
+        <image name="RDV" width="137" height="137"/>
+        <image name="activitephysique" width="137" height="137"/>
+        <image name="info" width="137" height="137"/>
+        <image name="medecin" width="137" height="137"/>
+        <image name="pillulier" width="137" height="137"/>
     </resources>
 </document>
