@@ -62,6 +62,40 @@ class PrescriptionViewController: UIViewController, UITableViewDataSource, UITab
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return self.names.count
     }
+    
+    //MARK: - Prescriptions data management -
+    
+    /// delete a prescription from collection according to its index
+    ///
+    /// - Precondition: index must be into bound of collection
+    /// - Parameter prescriptionWithIndex: index of prescription to delete
+    /// - Returns: true if deleton occurs, else false
+    func delete(prescriptionWithIndex index: Int)-> Bool{
+        guard let context
+    }
+    
+    //MARK: - TableView data source protocol -
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) -> Bool{
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath){
+        if(editingStyle==UITableViewCellEditingStyle.delete){
+            self.prescriptionTable.beginUpdates()
+            if self.delete(prescriptionWithIndex: IndexPath.row){
+                self.prescriptionTable.deleteRows(at: [IndexPath], with: UITableViewRowAnimation.automatic)
+            }
+            self.prescriptionTable.endUpdates()
+        }
+    }
+    
+    // MARK: - Helper methods -
+    
+    func getContext(errorMsg: String, userInfoMsg: String = "could not retrieve data context") -> NSManagedObjectContext?{
+        
+    }
+    
     /*
     // MARK: - Navigation
 
