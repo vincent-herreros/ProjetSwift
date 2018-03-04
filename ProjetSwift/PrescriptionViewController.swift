@@ -10,7 +10,35 @@ import UIKit
 
 class PrescriptionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var names : [String] = ["tata", "toto"]
+    var names : [String] = []
+    
+    @IBAction func addPrescription(_ sender: Any) {
+        let alert = UIAlertController(title: "Nouvelle Prescription",
+                                      message: "Ajouter une prescription",
+                                      preferredStyle: .alert)
+        
+        let saveAction = UIAlertAction(title: "Ajouter",
+                                       style: .default)
+        {
+            [unowned self] action in
+            guard let textField = alert.textFields?.first,
+                let nameToSave = textField.text else {
+                    return
+            }
+            self.names.append(nameToSave)
+            self.prescriptionTable.reloadData()
+        }
+        
+        let cancelAction = UIAlertAction(title: "Annuler",
+                                         style: .default)
+        
+        alert.addTextField()
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true)
+        
+    }
     
     @IBOutlet weak var prescriptionTable: UITableView!
     override func viewDidLoad() {
@@ -18,7 +46,8 @@ class PrescriptionViewController: UIViewController, UITableViewDataSource, UITab
 
         // Do any additional setup after loading the view.
     }
-
+   
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
