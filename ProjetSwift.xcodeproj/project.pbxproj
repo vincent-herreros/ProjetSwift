@@ -21,14 +21,8 @@
 		7D8372FF20459C9400ECE31B /* EvenementSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8372FD20459C9400ECE31B /* EvenementSet.swift */; };
 		7D8373212045A9E900ECE31B /* PrescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8373202045A9E900ECE31B /* PrescriptionViewController.swift */; };
 		7D8373222045A9E900ECE31B /* PrescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8373202045A9E900ECE31B /* PrescriptionViewController.swift */; };
-		AC3572D6204C64C700329E6D /* activitephysique.png in Resources */ = {isa = PBXBuildFile; fileRef = AC3572D0204C64C600329E6D /* activitephysique.png */; };
-		AC3572D7204C64C700329E6D /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = AC3572D1204C64C600329E6D /* info.png */; };
-		AC3572D8204C64C700329E6D /* pillulier.png in Resources */ = {isa = PBXBuildFile; fileRef = AC3572D2204C64C600329E6D /* pillulier.png */; };
-		AC3572D9204C64C700329E6D /* boutonajout.png in Resources */ = {isa = PBXBuildFile; fileRef = AC3572D3204C64C600329E6D /* boutonajout.png */; };
-		AC3572DA204C64C700329E6D /* medecin.png in Resources */ = {isa = PBXBuildFile; fileRef = AC3572D4204C64C600329E6D /* medecin.png */; };
-		AC3572DB204C64C700329E6D /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = AC3572D5204C64C700329E6D /* edit.png */; };
-		AC3572DD204C64D000329E6D /* LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = AC3572DC204C64D000329E6D /* LOGO.png */; };
-		AC3572DF204C651600329E6D /* RDV.png in Resources */ = {isa = PBXBuildFile; fileRef = AC3572DE204C651500329E6D /* RDV.png */; };
+		AC3572E1204C66AC00329E6D /* StarterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3572E0204C66AC00329E6D /* StarterViewController.swift */; };
+		AC3572E2204C66AC00329E6D /* StarterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3572E0204C66AC00329E6D /* StarterViewController.swift */; };
 		ACF5BB522041A64900ABEFFD /* Utilisateur.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB512041A64900ABEFFD /* Utilisateur.swift */; };
 		ACF5BB532041A64900ABEFFD /* Utilisateur.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB512041A64900ABEFFD /* Utilisateur.swift */; };
 		ACF5BB552041A96E00ABEFFD /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB542041A96E00ABEFFD /* Contact.swift */; };
@@ -88,14 +82,7 @@
 		7D8372F72045988000ECE31B /* PrescriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		7D8372FD20459C9400ECE31B /* EvenementSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvenementSet.swift; sourceTree = "<group>"; };
 		7D8373202045A9E900ECE31B /* PrescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrescriptionViewController.swift; sourceTree = "<group>"; };
-		AC3572D0204C64C600329E6D /* activitephysique.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = activitephysique.png; path = ../../Downloads/fwdiconesblanchespillalheure/activitephysique.png; sourceTree = "<group>"; };
-		AC3572D1204C64C600329E6D /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = info.png; path = ../../Downloads/fwdiconesblanchespillalheure/info.png; sourceTree = "<group>"; };
-		AC3572D2204C64C600329E6D /* pillulier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pillulier.png; path = ../../Downloads/fwdiconesblanchespillalheure/pillulier.png; sourceTree = "<group>"; };
-		AC3572D3204C64C600329E6D /* boutonajout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boutonajout.png; path = ../../Downloads/fwdiconesblanchespillalheure/boutonajout.png; sourceTree = "<group>"; };
-		AC3572D4204C64C600329E6D /* medecin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = medecin.png; path = ../../Downloads/fwdiconesblanchespillalheure/medecin.png; sourceTree = "<group>"; };
-		AC3572D5204C64C700329E6D /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = edit.png; path = ../../Downloads/fwdiconesblanchespillalheure/edit.png; sourceTree = "<group>"; };
-		AC3572DC204C64D000329E6D /* LOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LOGO.png; path = ../../Downloads/LOGO.png; sourceTree = "<group>"; };
-		AC3572DE204C651500329E6D /* RDV.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RDV.png; path = ../../Downloads/fwdiconesblanchespillalheure/RDV.png; sourceTree = "<group>"; };
+		AC3572E0204C66AC00329E6D /* StarterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarterViewController.swift; sourceTree = "<group>"; };
 		ACF5BB512041A64900ABEFFD /* Utilisateur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilisateur.swift; sourceTree = "<group>"; };
 		ACF5BB542041A96E00ABEFFD /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		ACF5BB572041AC0F00ABEFFD /* Rappel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rappel.swift; sourceTree = "<group>"; };
@@ -157,7 +144,6 @@
 		7D7313C8203B21DB000FD9F7 /* ProjetSwift */ = {
 			isa = PBXGroup;
 			children = (
-				AC3572CF204C64B600329E6D /* Images */,
 				7D9BF6FA2045B66800E631CE /* Controlleur */,
 				7D83730720459F8200ECE31B /* CoreData */,
 				7D7313C9203B21DC000FD9F7 /* AppDelegate.swift */,
@@ -210,26 +196,12 @@
 		7D9BF6FA2045B66800E631CE /* Controlleur */ = {
 			isa = PBXGroup;
 			children = (
+				AC3572E0204C66AC00329E6D /* StarterViewController.swift */,
 				7D8372F72045988000ECE31B /* PrescriptionTableViewCell.swift */,
 				7D8373202045A9E900ECE31B /* PrescriptionViewController.swift */,
 				7D7313CB203B21DC000FD9F7 /* ViewController.swift */,
 			);
 			name = Controlleur;
-			sourceTree = "<group>";
-		};
-		AC3572CF204C64B600329E6D /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				AC3572DE204C651500329E6D /* RDV.png */,
-				AC3572DC204C64D000329E6D /* LOGO.png */,
-				AC3572D0204C64C600329E6D /* activitephysique.png */,
-				AC3572D3204C64C600329E6D /* boutonajout.png */,
-				AC3572D5204C64C700329E6D /* edit.png */,
-				AC3572D1204C64C600329E6D /* info.png */,
-				AC3572D4204C64C600329E6D /* medecin.png */,
-				AC3572D2204C64C600329E6D /* pillulier.png */,
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,14 +313,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC3572D6204C64C700329E6D /* activitephysique.png in Resources */,
-				AC3572DF204C651600329E6D /* RDV.png in Resources */,
-				AC3572D7204C64C700329E6D /* info.png in Resources */,
-				AC3572DD204C64D000329E6D /* LOGO.png in Resources */,
-				AC3572DB204C64C700329E6D /* edit.png in Resources */,
-				AC3572D8204C64C700329E6D /* pillulier.png in Resources */,
-				AC3572DA204C64C700329E6D /* medecin.png in Resources */,
-				AC3572D9204C64C700329E6D /* boutonajout.png in Resources */,
 				7D7313D7203B21DC000FD9F7 /* LaunchScreen.storyboard in Resources */,
 				7D7313D4203B21DC000FD9F7 /* Assets.xcassets in Resources */,
 				7D7313CF203B21DC000FD9F7 /* Main.storyboard in Resources */,
@@ -392,6 +356,7 @@
 				ACF5BB822041C87500ABEFFD /* ExercicePhysique.swift in Sources */,
 				ACF5BB792041C53600ABEFFD /* Synthese.swift in Sources */,
 				ACF5BB522041A64900ABEFFD /* Utilisateur.swift in Sources */,
+				AC3572E1204C66AC00329E6D /* StarterViewController.swift in Sources */,
 				7D8372F82045988000ECE31B /* PrescriptionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +387,7 @@
 			files = (
 				7D7313ED203B21DC000FD9F7 /* ProjetSwiftUITests.swift in Sources */,
 				7D8373222045A9E900ECE31B /* PrescriptionViewController.swift in Sources */,
+				AC3572E2204C66AC00329E6D /* StarterViewController.swift in Sources */,
 				7D8372F92045988000ECE31B /* PrescriptionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
