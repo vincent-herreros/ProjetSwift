@@ -21,8 +21,8 @@
 		7D8372FF20459C9400ECE31B /* EvenementSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8372FD20459C9400ECE31B /* EvenementSet.swift */; };
 		7D8373212045A9E900ECE31B /* PrescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8373202045A9E900ECE31B /* PrescriptionViewController.swift */; };
 		7D8373222045A9E900ECE31B /* PrescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8373202045A9E900ECE31B /* PrescriptionViewController.swift */; };
-		7D9BF7022045C0BB00E631CE /* Activité.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9BF7012045C0BB00E631CE /* Activité.swift */; };
-		7D9BF7032045C0BB00E631CE /* Activité.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9BF7012045C0BB00E631CE /* Activité.swift */; };
+		AC3572E1204C66AC00329E6D /* StarterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3572E0204C66AC00329E6D /* StarterViewController.swift */; };
+		AC3572E2204C66AC00329E6D /* StarterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3572E0204C66AC00329E6D /* StarterViewController.swift */; };
 		ACF5BB522041A64900ABEFFD /* Utilisateur.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB512041A64900ABEFFD /* Utilisateur.swift */; };
 		ACF5BB532041A64900ABEFFD /* Utilisateur.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB512041A64900ABEFFD /* Utilisateur.swift */; };
 		ACF5BB552041A96E00ABEFFD /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB542041A96E00ABEFFD /* Contact.swift */; };
@@ -82,7 +82,7 @@
 		7D8372F72045988000ECE31B /* PrescriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		7D8372FD20459C9400ECE31B /* EvenementSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvenementSet.swift; sourceTree = "<group>"; };
 		7D8373202045A9E900ECE31B /* PrescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrescriptionViewController.swift; sourceTree = "<group>"; };
-		7D9BF7012045C0BB00E631CE /* Activité.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Activité.swift"; sourceTree = "<group>"; };
+		AC3572E0204C66AC00329E6D /* StarterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarterViewController.swift; sourceTree = "<group>"; };
 		ACF5BB512041A64900ABEFFD /* Utilisateur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilisateur.swift; sourceTree = "<group>"; };
 		ACF5BB542041A96E00ABEFFD /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		ACF5BB572041AC0F00ABEFFD /* Rappel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rappel.swift; sourceTree = "<group>"; };
@@ -144,7 +144,6 @@
 		7D7313C8203B21DB000FD9F7 /* ProjetSwift */ = {
 			isa = PBXGroup;
 			children = (
-				7D9BF7012045C0BB00E631CE /* Activité.swift */,
 				7D9BF6FA2045B66800E631CE /* Controlleur */,
 				7D83730720459F8200ECE31B /* CoreData */,
 				7D7313C9203B21DC000FD9F7 /* AppDelegate.swift */,
@@ -197,6 +196,7 @@
 		7D9BF6FA2045B66800E631CE /* Controlleur */ = {
 			isa = PBXGroup;
 			children = (
+				AC3572E0204C66AC00329E6D /* StarterViewController.swift */,
 				7D8372F72045988000ECE31B /* PrescriptionTableViewCell.swift */,
 				7D8373202045A9E900ECE31B /* PrescriptionViewController.swift */,
 				7D7313CB203B21DC000FD9F7 /* ViewController.swift */,
@@ -348,7 +348,6 @@
 				7D8372FE20459C9400ECE31B /* EvenementSet.swift in Sources */,
 				ACF5BB612041B1CA00ABEFFD /* Medicaments.swift in Sources */,
 				ACF5BB702041BEB500ABEFFD /* Questionnaire.swift in Sources */,
-				ACF5BB7F2041C64000ABEFFD /* Activité.swift in Sources */,
 				7D7313CC203B21DC000FD9F7 /* ViewController.swift in Sources */,
 				ACF5BB552041A96E00ABEFFD /* Contact.swift in Sources */,
 				7D7313CA203B21DC000FD9F7 /* AppDelegate.swift in Sources */,
@@ -357,6 +356,7 @@
 				ACF5BB822041C87500ABEFFD /* ExercicePhysique.swift in Sources */,
 				ACF5BB792041C53600ABEFFD /* Synthese.swift in Sources */,
 				ACF5BB522041A64900ABEFFD /* Utilisateur.swift in Sources */,
+				AC3572E1204C66AC00329E6D /* StarterViewController.swift in Sources */,
 				7D8372F82045988000ECE31B /* PrescriptionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +387,7 @@
 			files = (
 				7D7313ED203B21DC000FD9F7 /* ProjetSwiftUITests.swift in Sources */,
 				7D8373222045A9E900ECE31B /* PrescriptionViewController.swift in Sources */,
+				AC3572E2204C66AC00329E6D /* StarterViewController.swift in Sources */,
 				7D8372F92045988000ECE31B /* PrescriptionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
