@@ -11,11 +11,31 @@ import CoreData
 
 class PrescriptionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var names : [String] = ["tata", "toto"]
+    /// Collection de prescriptions affiché dans prescriptionTable
     var prescriptions : [Prescriptions] = []
     
     @IBOutlet weak var prescriptionTable: UITableView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+        guard let context = getContext(errorMsg: "Could not load data") else{
+            return
+        }
+        let request : NSFetchRequest<Prescriptions> = Prescriptions.fetchRequest()
+        do{
+            try self.prescriptions = context.fetch(request)
+        }
+        catch let error as NSError{
+            self.alert(error: error)
+        }
+    }
+    
+    /// Appeler quand le bouton "add" est est pressé
+    ///
+    /// Ouvre une boite de dialogue demandant le nom de la prescription
+    /// - Parameter sender: Objet qui fait l'action
     @IBAction func addPrescription(_ sender: Any) {
         let alert = UIAlertController(title: "Nouvelle Prescription",
                                       message: "Ajouter une prescription",
@@ -43,12 +63,15 @@ class PrescriptionViewController: UIViewController, UITableViewDataSource, UITab
         present(alert, animated: true)
     }
     
+    // MARK: - Prescriptions data management -
+    
+    /// Creer une nouvelle prescription, la sauvegarde et l'ajoute à la collection
+    ///
+    /// - Parameter name: Nom de la prescription
     func saveNewPrescription(withName name: String){
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
-            self.alertError(errorMsg: "Could not save person", userInfo: "unknown reason")
+       guard let context = self.getContext(errorMsg: "Save failed") else{
             return
         }
-        let context = appDelegate.persistentContainer.viewContext
         let prescription = Prescriptions(context: context)
         prescription.nomPrescri = name
         do{
@@ -56,31 +79,17 @@ class PrescriptionViewController: UIViewController, UITableViewDataSource, UITab
             self.prescriptions.append(prescription)
         }
         catch let error as NSError{
-            self.alertError(errorMsg: "\(error)", userInfo: "\(error.userInfo)")
+            self.alert(error: error)
             return
         }
     }
     
-    func alertError(errorMsg error : String, userInfo user: String = ""){
-        let alert = UIAlertController(title: error,
-                                      message: user,
-                                      preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "OK",
-                                         style: .default)
-        alert.addAction(cancelAction)
-        present(alert,animated: true)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - Table View Data Source protocol -
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = self.prescriptionTable.dequeueReusableCell(withIdentifier: "prescriptionCell", for: indexPath) as! PrescriptionTableViewCell
@@ -91,14 +100,43 @@ class PrescriptionViewController: UIViewController, UITableViewDataSource, UITab
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return self.prescriptions.count
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    // MARK: - Helper Methods
+    
+    /// Récupère le context d'un Core Data initialisé dans l'application delegate
+    ///
+    /// - Parameters:
+    ///   - errorMsg: Message d'erreur
+    ///   - userInfoMsg: Information additionnelle
+    /// - Returns: Retourne le context d'un Core Data
+    func getContext(errorMsg: String, userInfoMsg: String = "could not retrieve data context") -> NSManagedObjectContext?{
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            self.alert(WithTitle: errorMsg, andMessage: userInfoMsg)
+            return nil
+        }
+        return appDelegate.persistentContainer.viewContext
     }
-    */
+    
+    /// Fait apparaître une boite de dialogue "alert" avec 2 messages
+    ///
+    /// - Parameters:
+    ///   - title: Titre de la boite de dialogue
+    ///   - msg: Message de la boite de dialogue
+    func alert(WithTitle title: String, andMessage msg: String = ""){
+        let alert = UIAlertController(title: title,
+                                      message: msg,
+                                      preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "OK",
+                                         style: .default)
+        alert.addAction(cancelAction)
+        present(alert,animated: true)
+    }
+    
+    /// Fait apparaître une boite de dialogue lorsqu'il y a une erreur.
+    ///
+    /// - Parameter error: Erreur donné à la boite de dialogue
+    func alert(error: NSError){
+        self.alert(WithTitle:"\(error)", andMessage: "\(error.userInfo)")
+    }
 
 }
