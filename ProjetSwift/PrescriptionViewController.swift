@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class PrescriptionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var names : [String] = []
+    var prescriptions : [Prescriptions] = []
     
     @IBAction func addPrescription(_ sender: Any) {
         let alert = UIAlertController(title: "Nouvelle Prescription",
@@ -25,7 +27,7 @@ class PrescriptionViewController: UIViewController, UITableViewDataSource, UITab
                 let nameToSave = textField.text else {
                     return
             }
-            self.names.append(nameToSave)
+            self.saveNewPrescription(withName: nameToSave)
             self.prescriptionTable.reloadData()
         }
         
@@ -38,6 +40,34 @@ class PrescriptionViewController: UIViewController, UITableViewDataSource, UITab
         
         present(alert, animated: true)
         
+    }
+    
+    func saveNewPrescription(withName name: String){
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
+            self.alertError(errorMsg: "Could not save person", userInfo: "unknown reason")
+            return
+        }
+        let context = appDelegate.persistentContainer.viewContext
+        let prescription = Prescriptions(context: context)
+        prescription.nomPrescri = name
+        do{
+            try context.save()
+            self.prescriptions.append(prescription)
+        }
+        catch let error as NSError{
+            self.alertError(errorMsg: "\(error)", userInfo: "\(error.userInfo)")
+            return
+        }
+    }
+    
+    func alertError(errorMsg error : String, userInfo user: String = ""){
+        let alert = UIAlertController(title: error,
+                                      message: user,
+                                      preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "OK",
+                                         style: .default)
+        alert.addAction(cancelAction)
+        present(alert,animated: true)
     }
     
     @IBOutlet weak var prescriptionTable: UITableView!
@@ -55,46 +85,14 @@ class PrescriptionViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = self.prescriptionTable.dequeueReusableCell(withIdentifier: "prescriptionCell", for: indexPath) as! PrescriptionTableViewCell
-        cell.nomMedoc.text = self.names[indexPath.row]
+        cell.nomMedoc.text = self.prescriptions[indexPath.row].nomPrescri
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return self.names.count
+        return self.prescriptions.count
     }
     
-    //MARK: - Prescriptions data management -
-    
-    /// delete a prescription from collection according to its index
-    ///
-    /// - Precondition: index must be into bound of collection
-    /// - Parameter prescriptionWithIndex: index of prescription to delete
-    /// - Returns: true if deleton occurs, else false
-    func delete(prescriptionWithIndex index: Int)-> Bool{
-        guard let context
-    }
-    
-    //MARK: - TableView data source protocol -
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) -> Bool{
-        return true
-    }
-    
-    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath){
-        if(editingStyle==UITableViewCellEditingStyle.delete){
-            self.prescriptionTable.beginUpdates()
-            if self.delete(prescriptionWithIndex: IndexPath.row){
-                self.prescriptionTable.deleteRows(at: [IndexPath], with: UITableViewRowAnimation.automatic)
-            }
-            self.prescriptionTable.endUpdates()
-        }
-    }
-    
-    // MARK: - Helper methods -
-    
-    func getContext(errorMsg: String, userInfoMsg: String = "could not retrieve data context") -> NSManagedObjectContext?{
-        
-    }
     
     /*
     // MARK: - Navigation
