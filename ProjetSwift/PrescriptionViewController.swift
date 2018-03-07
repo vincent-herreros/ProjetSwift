@@ -92,8 +92,6 @@ class PrescriptionViewController: UIViewController, UITableViewDataSource, UITab
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return self.prescriptions.count
     }
-    
-    
     /*
     // MARK: - Navigation
 
