@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Evenements" representedClassName="Evenements" syncable="YES" codeGenerationType="class">
         <relationship name="prescription" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Prescriptions" inverseName="evenement" inverseEntity="Prescriptions" syncable="YES"/>
         <relationship name="rappel" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Rappels" inverseName="evenement" inverseEntity="Rappels" syncable="YES"/>
@@ -18,6 +18,7 @@
         <attribute name="heureFin" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="heurePrecise" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="intervalle" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="nomPrescri" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="evenement" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Evenements" inverseName="prescription" inverseEntity="Evenements" syncable="YES"/>
         <relationship name="medicament" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Medicaments" inverseName="prescription" inverseEntity="Medicaments" syncable="YES"/>
     </entity>
@@ -27,9 +28,9 @@
         <relationship name="evenement" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Evenements" inverseName="rappel" inverseEntity="Evenements" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Evenements" positionX="351" positionY="-333" width="128" height="73"/>
-        <element name="Medicaments" positionX="-81" positionY="-370" width="128" height="118"/>
-        <element name="Prescriptions" positionX="135" positionY="-396" width="128" height="163"/>
-        <element name="Rappels" positionX="585" positionY="-324" width="128" height="88"/>
+        <element name="Evenements" positionX="-0" positionY="-558" width="128" height="73"/>
+        <element name="Medicaments" positionX="493" positionY="-514" width="128" height="118"/>
+        <element name="Prescriptions" positionX="270" positionY="-603" width="128" height="178"/>
+        <element name="Rappels" positionX="-180" positionY="-558" width="128" height="88"/>
     </elements>
 </model>
