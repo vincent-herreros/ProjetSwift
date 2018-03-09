@@ -12,6 +12,8 @@ import CoreData
 class PrescriptionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     /// Collection de prescriptions affiché dans prescriptionTable
+    
+    
     var prescriptions : [Prescriptions] = []
     
     @IBOutlet weak var prescriptionTable: UITableView!
@@ -84,6 +86,28 @@ class PrescriptionViewController: UIViewController, UITableViewDataSource, UITab
         }
     }
     
+    /// Enelve une prescription de la collection à l'index indiqué
+    ///
+    /// - Preconditions: L'index doit appartenir à la collection
+    /// - Parameter prescriptionWithIndex:Index de la personne à supprimer
+    /// - Returns: True, si la suppression est faite, sinon false
+    func delete(prescriptionWithIndex index: Int) -> Bool{
+        guard let context = getContext(errorMsg: "Could not delete Prescription") else {
+            return false
+        }
+        let prescription = self.prescriptions[index]
+        context.delete(prescription)
+        do{
+            try context.save()
+            self.prescriptions.remove(at: index)
+            return true
+        }
+        catch let error as NSError{
+            self.alert(error: error)
+            return false
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -138,5 +162,22 @@ class PrescriptionViewController: UIViewController, UITableViewDataSource, UITab
     func alert(error: NSError){
         self.alert(WithTitle:"\(error)", andMessage: "\(error.userInfo)")
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
+        //Indique si on appelle la fonction pour un effacement de ligne ou non
+        if (editingStyle==UITableViewCellEditingStyle.delete){
+            self.prescriptionTable.beginUpdates()
+            if self.delete(prescriptionWithIndex: indexPath.row){
+                self.prescriptionTable.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            }
+            self.prescriptionTable.endUpdates()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool{
+        return true
+    }
+    
+    
 
 }
