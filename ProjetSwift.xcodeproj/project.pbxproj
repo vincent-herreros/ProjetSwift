@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30F454A92053513100EACBD9 /* MedicamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F454A82053513100EACBD9 /* MedicamentViewController.swift */; };
+		30F454AA2053513100EACBD9 /* MedicamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F454A82053513100EACBD9 /* MedicamentViewController.swift */; };
+		30F454AC2053518500EACBD9 /* MedicamentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F454AB2053518500EACBD9 /* MedicamentTableViewCell.swift */; };
+		30F454AD2053518500EACBD9 /* MedicamentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F454AB2053518500EACBD9 /* MedicamentTableViewCell.swift */; };
 		7D7313CA203B21DC000FD9F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7313C9203B21DC000FD9F7 /* AppDelegate.swift */; };
 		7D7313CC203B21DC000FD9F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7313CB203B21DC000FD9F7 /* ViewController.swift */; };
 		7D7313CF203B21DC000FD9F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7313CD203B21DC000FD9F7 /* Main.storyboard */; };
@@ -65,6 +69,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30F454A82053513100EACBD9 /* MedicamentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentViewController.swift; sourceTree = "<group>"; };
+		30F454AB2053518500EACBD9 /* MedicamentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentTableViewCell.swift; sourceTree = "<group>"; };
 		7D7313C6203B21DB000FD9F7 /* ProjetSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7313C9203B21DC000FD9F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D7313CB203B21DC000FD9F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -145,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				7D9BF6FA2045B66800E631CE /* Controlleur */,
-				7D83730720459F8200ECE31B /* CoreData */,
 				7D7313C9203B21DC000FD9F7 /* AppDelegate.swift */,
 				7D7313CD203B21DC000FD9F7 /* Main.storyboard */,
 				7D7313D3203B21DC000FD9F7 /* Assets.xcassets */,
@@ -186,16 +191,11 @@
 			path = ProjetSwiftUITests;
 			sourceTree = "<group>";
 		};
-		7D83730720459F8200ECE31B /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = CoreData;
-			sourceTree = "<group>";
-		};
 		7D9BF6FA2045B66800E631CE /* Controlleur */ = {
 			isa = PBXGroup;
 			children = (
+				30F454A82053513100EACBD9 /* MedicamentViewController.swift */,
+				30F454AB2053518500EACBD9 /* MedicamentTableViewCell.swift */,
 				AC3572E0204C66AC00329E6D /* StarterViewController.swift */,
 				7D8372F72045988000ECE31B /* PrescriptionTableViewCell.swift */,
 				7D8373202045A9E900ECE31B /* PrescriptionViewController.swift */,
@@ -342,6 +342,7 @@
 			files = (
 				7D8373212045A9E900ECE31B /* PrescriptionViewController.swift in Sources */,
 				ACF5BB6A2041BCDA00ABEFFD /* RendezVous.swift in Sources */,
+				30F454A92053513100EACBD9 /* MedicamentViewController.swift in Sources */,
 				ACF5BB642041B3CB00ABEFFD /* Prescription.swift in Sources */,
 				7D7313D2203B21DC000FD9F7 /* ProjetSwift.xcdatamodeld in Sources */,
 				ACF5BB582041AC0F00ABEFFD /* Rappel.swift in Sources */,
@@ -353,6 +354,7 @@
 				7D7313CA203B21DC000FD9F7 /* AppDelegate.swift in Sources */,
 				ACF5BB5B2041AE2C00ABEFFD /* Evenement.swift in Sources */,
 				ACF5BB6D2041BDA700ABEFFD /* Evaluation.swift in Sources */,
+				30F454AC2053518500EACBD9 /* MedicamentTableViewCell.swift in Sources */,
 				ACF5BB822041C87500ABEFFD /* ExercicePhysique.swift in Sources */,
 				ACF5BB792041C53600ABEFFD /* Synthese.swift in Sources */,
 				ACF5BB522041A64900ABEFFD /* Utilisateur.swift in Sources */,
@@ -366,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACF5BB6E2041BDA700ABEFFD /* Evaluation.swift in Sources */,
+				30F454AA2053513100EACBD9 /* MedicamentViewController.swift in Sources */,
 				ACF5BB832041C87500ABEFFD /* ExercicePhysique.swift in Sources */,
 				ACF5BB6B2041BCDA00ABEFFD /* RendezVous.swift in Sources */,
 				ACF5BB622041B1CA00ABEFFD /* Medicaments.swift in Sources */,
@@ -373,6 +376,7 @@
 				ACF5BB562041A96E00ABEFFD /* Contact.swift in Sources */,
 				7D8372FF20459C9400ECE31B /* EvenementSet.swift in Sources */,
 				7D7313E2203B21DC000FD9F7 /* ProjetSwiftTests.swift in Sources */,
+				30F454AD2053518500EACBD9 /* MedicamentTableViewCell.swift in Sources */,
 				ACF5BB712041BEB500ABEFFD /* Questionnaire.swift in Sources */,
 				ACF5BB652041B3CB00ABEFFD /* Prescription.swift in Sources */,
 				ACF5BB5C2041AE2C00ABEFFD /* Evenement.swift in Sources */,
