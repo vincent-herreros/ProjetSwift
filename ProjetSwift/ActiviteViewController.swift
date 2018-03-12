@@ -11,7 +11,7 @@ import CoreData
 
 class ActiviteViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     
-    var activites: [String]=[]
+    var activites: [Activites]=[]
 
     @IBOutlet weak var activiteTable: UITableView!
     @IBAction func addActivite(_ sender: Any) {
@@ -26,7 +26,7 @@ class ActiviteViewController: UIViewController,UITableViewDataSource, UITableVie
                 let nameToSave = textField.text else {
                     return
             }
-            self.activites.append(nameToSave)
+            self.saveNewActivite(withName:nameToSave)
             self.activiteTable.reloadData()
         }
         
@@ -38,8 +38,46 @@ class ActiviteViewController: UIViewController,UITableViewDataSource, UITableVie
         present(alert, animated: true)
     }
     
+    func saveNewActivite(withName name: String){
+        guard let appDelegate=UIApplication.shared.delegate as? AppDelegate else{
+        self.alertError(errorMsg: "Could not save the activitie", userInfo: "unknown reason")
+        return
+        }
+        let context = appDelegate.persistentContainer.viewContext
+        let activite = Activites(context: context)
+        activite.nom = name
+        do{
+            try context.save()
+            self.activites.append(activite)
+        }
+        catch let error as NSError{
+            self.alertError(errorMsg: "\(error)",userInfo: "\(error.userInfo)")
+            return
+        }
+    }
+    
+    func alertError(errorMsg error:String, userInfo user :String = ""){
+        let alert = UIAlertController(title: error, message: user, preferredStyle: .alert )
+        let cancelAction = UIAlertAction(title:"Ok", style: .default)
+        alert.addAction(cancelAction)
+        present(alert,animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let appDelegate=UIApplication.shared.delegate as? AppDelegate else{
+            self.alertError(errorMsg: "Could not save the activitie", userInfo: "unknown reason")
+            return
+        }
+        let context = appDelegate.persistentContainer.viewContext
+        let request : NSFetchRequest<Activites> = Activites.fetchRequest()
+        do{
+            try self.activites = context.fetch(request)
+        }
+        catch let error as NSError {
+            self.alertError(errorMsg: "\(error)",userInfo: "\(error.userInfo)")
+        }
+    
 
         // Do any additional setup after loading the view.
     }
@@ -48,6 +86,7 @@ class ActiviteViewController: UIViewController,UITableViewDataSource, UITableVie
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+     // MARK: - Table View Data Source protocol -
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.activites.count
@@ -55,10 +94,12 @@ class ActiviteViewController: UIViewController,UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.activiteTable.dequeueReusableCell(withIdentifier: "activiteCell", for: indexPath) as! ActiviteTableViewCell
-        cell.labelActivite.text = self.activites[indexPath.row]
+        cell.labelActivite.text = self.activites[indexPath.row].nom
         return cell
         
     }
+    //MARK : - Helper Method -
+    
     
     /*
     // MARK: - Navigation
