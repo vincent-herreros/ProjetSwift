@@ -14,6 +14,7 @@ class ActiviteViewController: UIViewController,UITableViewDataSource, UITableVie
     var activites: [Activites]=[]
 
     @IBOutlet weak var activiteTable: UITableView!
+    
     @IBAction func addActivite(_ sender: Any) {
         let alert = UIAlertController(title: "Nouvelle Activité",
                                       message: "Ajouter une Activité",
@@ -39,11 +40,7 @@ class ActiviteViewController: UIViewController,UITableViewDataSource, UITableVie
     }
     
     func saveNewActivite(withName name: String){
-        guard let appDelegate=UIApplication.shared.delegate as? AppDelegate else{
-        self.alertError(errorMsg: "Could not save the activitie", userInfo: "unknown reason")
-        return
-        }
-        let context = appDelegate.persistentContainer.viewContext
+        guard let context = self.getContext(errorMsg: "Save failed") else {return }
         let activite = Activites(context: context)
         activite.nom = name
         do{
@@ -65,17 +62,13 @@ class ActiviteViewController: UIViewController,UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let appDelegate=UIApplication.shared.delegate as? AppDelegate else{
-            self.alertError(errorMsg: "Could not save the activitie", userInfo: "unknown reason")
-            return
-        }
-        let context = appDelegate.persistentContainer.viewContext
+        guard let context = self.getContext(errorMsg: "Could not load data") else {return }
         let request : NSFetchRequest<Activites> = Activites.fetchRequest()
         do{
             try self.activites = context.fetch(request)
         }
         catch let error as NSError {
-            self.alertError(errorMsg: "\(error)",userInfo: "\(error.userInfo)")
+            self.alert(error: error)
         }
     
 
@@ -100,6 +93,41 @@ class ActiviteViewController: UIViewController,UITableViewDataSource, UITableVie
     }
     //MARK : - Helper Method -
     
+    /// Récupère le context d'un Core Data initialisé dans l'application delegate
+    ///
+    /// - Parameters:
+    ///   - errorMsg: Message d'erreur
+    ///   - userInfoMsg: Information additionnelle
+    /// - Returns: Retourne le context d'un Core Data
+    func getContext(errorMsg: String, userInfoMsg: String = "could not retrieve data context") -> NSManagedObjectContext?{
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            self.alert(WithTitle: errorMsg, andMessage: userInfoMsg)
+            return nil
+        }
+        return appDelegate.persistentContainer.viewContext
+    }
+    
+    /// Fait apparaître une boite de dialogue "alert" avec 2 messages
+    ///
+    /// - Parameters:
+    ///   - title: Titre de la boite de dialogue
+    ///   - msg: Message de la boite de dialogue
+    func alert(WithTitle title: String, andMessage msg: String = ""){
+        let alert = UIAlertController(title: title,
+                                      message: msg,
+                                      preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "OK",
+                                         style: .default)
+        alert.addAction(cancelAction)
+        present(alert,animated: true)
+    }
+    
+    /// Fait apparaître une boite de dialogue lorsqu'il y a une erreur.
+    ///
+    /// - Parameter error: Erreur donné à la boite de dialogue
+    func alert(error: NSError){
+        self.alert(WithTitle:"\(error)", andMessage: "\(error.userInfo)")
+    }
     
     /*
     // MARK: - Navigation
