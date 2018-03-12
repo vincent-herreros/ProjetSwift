@@ -7,16 +7,59 @@
 //
 
 import UIKit
+import CoreData
 
-class MedicamentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MedicamentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate{
+    
 
     @IBOutlet weak var medicamentTable: UITableView!
     var medicaments : [Medicaments] = []
     
+    @IBAction func addMedicament(_ sender: Any) {
+        let alert = UIAlertController(title: "Nouveau Médicament",
+                                      message: "Ajouter un médicament avec son nom, sa dose et sa description",
+                                      preferredStyle: .alert)
+        //Submit button
+        let submitAction = UIAlertAction(title: "Ajouter",
+                                         style: .default,
+                                         handler:{ (action) -> Void in
+            //TextField
+            let nomMedicamentText = alert.textFields![0]
+            let doseMedicamentText = alert.textFields![1]
+            let uniteMedicamentText = alert.textFields![2]
+            let descriptionMedicamentText = alert.textFields![3]
+        })
+        
+        //Cancel
+        let cancel = UIAlertAction(title: "Annuler", style: .default, handler: { (action) -> Void in })
+        
+        //Add textField
+        alert.addTextField{ (textField: UITextField) in
+            textField.placeholder = "Nom du médicament"
+        }
+        alert.addTextField{ (textField: UITextField) in
+            textField.placeholder = "Dose du médicament"
+        }
+        alert.addTextField{ (textField: UITextField) in
+            textField.placeholder = "Unité de la dose"
+        }
+        alert.addTextField{(textField: UITextField) in
+            textField.placeholder = "Description"
+        }
+        //Add action
+        alert.addAction(submitAction)
+        alert.addAction(cancel)
+        present(alert, animated: true)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func saveNewMedicament(withName name: String, withDose dose: String){
+        
     }
 
     override func didReceiveMemoryWarning() {
