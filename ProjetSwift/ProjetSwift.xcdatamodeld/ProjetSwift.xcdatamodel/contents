@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D102" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Activites" representedClassName="Activites" syncable="YES" codeGenerationType="class">
+        <attribute name="dateActivite" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="encouragement" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="evenement" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Evenements" inverseName="activite" inverseEntity="Evenements" syncable="YES"/>
+    </entity>
     <entity name="Evenements" representedClassName="Evenements" syncable="YES" codeGenerationType="class">
+        <relationship name="activite" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activites" inverseName="evenement" inverseEntity="Activites" syncable="YES"/>
         <relationship name="prescription" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Prescriptions" inverseName="evenement" inverseEntity="Prescriptions" syncable="YES"/>
         <relationship name="rappel" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Rappels" inverseName="evenement" inverseEntity="Rappels" syncable="YES"/>
     </entity>
@@ -28,7 +35,8 @@
         <relationship name="evenement" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Evenements" inverseName="rappel" inverseEntity="Evenements" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Evenements" positionX="351" positionY="-333" width="128" height="73"/>
+        <element name="Activites" positionX="286" positionY="-162" width="128" height="105"/>
+        <element name="Evenements" positionX="351" positionY="-333" width="128" height="90"/>
         <element name="Medicaments" positionX="-81" positionY="-370" width="128" height="118"/>
         <element name="Prescriptions" positionX="135" positionY="-396" width="128" height="180"/>
         <element name="Rappels" positionX="585" positionY="-324" width="128" height="88"/>

@@ -27,6 +27,8 @@
 		7D8373222045A9E900ECE31B /* PrescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8373202045A9E900ECE31B /* PrescriptionViewController.swift */; };
 		AC3572E1204C66AC00329E6D /* StarterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3572E0204C66AC00329E6D /* StarterViewController.swift */; };
 		AC3572E2204C66AC00329E6D /* StarterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3572E0204C66AC00329E6D /* StarterViewController.swift */; };
+		ACE425672057501900E21D80 /* ActiviteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE425652057501900E21D80 /* ActiviteTableViewCell.swift */; };
+		ACE425682057501900E21D80 /* ActiviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE425662057501900E21D80 /* ActiviteViewController.swift */; };
 		ACF5BB522041A64900ABEFFD /* Utilisateur.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB512041A64900ABEFFD /* Utilisateur.swift */; };
 		ACF5BB532041A64900ABEFFD /* Utilisateur.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB512041A64900ABEFFD /* Utilisateur.swift */; };
 		ACF5BB552041A96E00ABEFFD /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB542041A96E00ABEFFD /* Contact.swift */; };
@@ -89,6 +91,8 @@
 		7D8372FD20459C9400ECE31B /* EvenementSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvenementSet.swift; sourceTree = "<group>"; };
 		7D8373202045A9E900ECE31B /* PrescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrescriptionViewController.swift; sourceTree = "<group>"; };
 		AC3572E0204C66AC00329E6D /* StarterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarterViewController.swift; sourceTree = "<group>"; };
+		ACE425652057501900E21D80 /* ActiviteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiviteTableViewCell.swift; sourceTree = "<group>"; };
+		ACE425662057501900E21D80 /* ActiviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiviteViewController.swift; sourceTree = "<group>"; };
 		ACF5BB512041A64900ABEFFD /* Utilisateur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilisateur.swift; sourceTree = "<group>"; };
 		ACF5BB542041A96E00ABEFFD /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		ACF5BB572041AC0F00ABEFFD /* Rappel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rappel.swift; sourceTree = "<group>"; };
@@ -194,6 +198,8 @@
 		7D9BF6FA2045B66800E631CE /* Controlleur */ = {
 			isa = PBXGroup;
 			children = (
+				ACE425652057501900E21D80 /* ActiviteTableViewCell.swift */,
+				ACE425662057501900E21D80 /* ActiviteViewController.swift */,
 				30F454A82053513100EACBD9 /* MedicamentViewController.swift */,
 				30F454AB2053518500EACBD9 /* MedicamentTableViewCell.swift */,
 				AC3572E0204C66AC00329E6D /* StarterViewController.swift */,
@@ -343,6 +349,7 @@
 				7D8373212045A9E900ECE31B /* PrescriptionViewController.swift in Sources */,
 				ACF5BB6A2041BCDA00ABEFFD /* RendezVous.swift in Sources */,
 				30F454A92053513100EACBD9 /* MedicamentViewController.swift in Sources */,
+				ACE425682057501900E21D80 /* ActiviteViewController.swift in Sources */,
 				ACF5BB642041B3CB00ABEFFD /* Prescription.swift in Sources */,
 				7D7313D2203B21DC000FD9F7 /* ProjetSwift.xcdatamodeld in Sources */,
 				ACF5BB582041AC0F00ABEFFD /* Rappel.swift in Sources */,
@@ -360,6 +367,7 @@
 				ACF5BB522041A64900ABEFFD /* Utilisateur.swift in Sources */,
 				AC3572E1204C66AC00329E6D /* StarterViewController.swift in Sources */,
 				7D8372F82045988000ECE31B /* PrescriptionTableViewCell.swift in Sources */,
+				ACE425672057501900E21D80 /* ActiviteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

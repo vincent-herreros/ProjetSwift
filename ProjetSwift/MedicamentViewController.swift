@@ -11,8 +11,10 @@ import UIKit
 class MedicamentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var medicamentTable: UITableView!
-    var medicaments : [Medicaments] = []
+    var medicaments : [String] = []
     
+    @IBAction func addMedicament(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,7 +30,7 @@ class MedicamentViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = self.medicamentTable.dequeueReusableCell(withIdentifier: "medicamentCell", for: indexPath) as! MedicamentTableViewCell
-        cell.nomMedicament.text = self.medicaments[indexPath.row].nom
+        //cell.nomMedicament.text = self.medicaments[indexPath.row].nom
         return cell
     }
     
