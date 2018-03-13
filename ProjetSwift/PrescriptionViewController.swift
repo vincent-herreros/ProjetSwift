@@ -20,7 +20,7 @@ class PrescriptionViewController: UIViewController, UITableViewDataSource, UITab
     
     @IBOutlet weak var pickerMedicament: UIPickerView!
     
-    var pickerData : [Medicaments] = []
+    var pickerData : [Medicament] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,12 +40,8 @@ class PrescriptionViewController: UIViewController, UITableViewDataSource, UITab
             self.alert(error: error)
         }
         //Load pickerData
-        request : NSFetchRequest<Medicaments> = Medicaments.fetchRequest()
-        do{
-            try self.pickerData = context.fetch(request)
-        }
-        catch let error as NSError{
-            self.alert(error: error)
+        guard let context2 = getContext(errorMsg: "Could not load data") else{
+            return
         }
     }
     
@@ -87,7 +83,7 @@ class PrescriptionViewController: UIViewController, UITableViewDataSource, UITab
         return pickerData.count
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row].nom
     }
     

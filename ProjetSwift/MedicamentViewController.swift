@@ -13,7 +13,7 @@ class MedicamentViewController: UIViewController, UITableViewDataSource, UITable
     
 
     @IBOutlet weak var medicamentTable: UITableView!
-    var medicaments : [Medicaments] = []
+    var medicaments : [Medicament] = []
     
     @IBAction func addMedicament(_ sender: Any) {
         let alert = UIAlertController(title: "Nouveau Médicament",
@@ -26,11 +26,12 @@ class MedicamentViewController: UIViewController, UITableViewDataSource, UITable
             //TextField
             let nomMedicamentText = alert.textFields![0]
             let doseMedicamentText = alert.textFields![1]
+                                            let doseint : Int64 = 3
             let uniteMedicamentText = alert.textFields![2]
             let descriptionMedicamentText = alert.textFields![3]
-            
-                                            self.saveNewMedicament(withName: nomMedicamentText.text!, withDose: doseMedicamentText.text!, withUnite: uniteMedicamentText.text!, withDescription: descriptionMedicamentText.text!)
-                                            self.medicamentTable.reloadData()
+            let medicament = Medicament(nom: nomMedicamentText.text!, dose: doseint, unite: uniteMedicamentText.text!, desc: descriptionMedicamentText.text!)
+            self.medicaments.append(medicament)
+            self.medicamentTable.reloadData()
         })
         
         //Cancel
@@ -58,34 +59,13 @@ class MedicamentViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        guard let context = getContext(errorMsg: "Could not load data") else{
-            return
-        }
-        let request : NSFetchRequest<Medicaments> = Medicaments.fetchRequest()
-        do{
-            try self.medicaments = context.fetch(request)
-        }
-        catch let error as NSError{
-            self.alert(error: error)
-        }    }
+    }
     
     func saveNewMedicament(withName name: String, withDose dose: String, withUnite unite: String, withDescription description: String){
         guard let context = self.getContext(errorMsg: "Save failed") else{
             return
         }
-        let medicament = Medicaments(context: context)
-        medicament.nom = name
-        medicament.dose = Int64(dose)!
-        medicament.unite = unite
-        medicament.descript = description
-        do{
-            try context.save()
-            self.medicaments.append(medicament)
-        }
-        catch let error as NSError{
-            self.alert(error: error)
-            return
-        }
+        let medicament = Medicament(nom: name, dose: Int64(dose)!, unite: unite, desc: description)
     }
     
     /// Enelve un medicament de la collection à l'index indiqué
@@ -98,7 +78,7 @@ class MedicamentViewController: UIViewController, UITableViewDataSource, UITable
             return false
         }
         let medicament = self.medicaments[index]
-        context.delete(medicament)
+//        context.delete(medicament)
         do{
             try context.save()
             self.medicaments.remove(at: index)

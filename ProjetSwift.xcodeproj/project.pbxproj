@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,8 @@
 		30F454AA2053513100EACBD9 /* MedicamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F454A82053513100EACBD9 /* MedicamentViewController.swift */; };
 		30F454AC2053518500EACBD9 /* MedicamentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F454AB2053518500EACBD9 /* MedicamentTableViewCell.swift */; };
 		30F454AD2053518500EACBD9 /* MedicamentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F454AB2053518500EACBD9 /* MedicamentTableViewCell.swift */; };
+		7D3063FA205813680032CBF5 /* Medicament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3063F9205813680032CBF5 /* Medicament.swift */; };
+		7D3063FB205813680032CBF5 /* Medicament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3063F9205813680032CBF5 /* Medicament.swift */; };
 		7D7313CA203B21DC000FD9F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7313C9203B21DC000FD9F7 /* AppDelegate.swift */; };
 		7D7313CC203B21DC000FD9F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7313CB203B21DC000FD9F7 /* ViewController.swift */; };
 		7D7313CF203B21DC000FD9F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7313CD203B21DC000FD9F7 /* Main.storyboard */; };
@@ -35,8 +37,8 @@
 		ACF5BB592041AC0F00ABEFFD /* Rappel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB572041AC0F00ABEFFD /* Rappel.swift */; };
 		ACF5BB5B2041AE2C00ABEFFD /* Evenement.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB5A2041AE2C00ABEFFD /* Evenement.swift */; };
 		ACF5BB5C2041AE2C00ABEFFD /* Evenement.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB5A2041AE2C00ABEFFD /* Evenement.swift */; };
-		ACF5BB612041B1CA00ABEFFD /* Medicaments.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB602041B1CA00ABEFFD /* Medicaments.swift */; };
-		ACF5BB622041B1CA00ABEFFD /* Medicaments.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB602041B1CA00ABEFFD /* Medicaments.swift */; };
+		ACF5BB612041B1CA00ABEFFD /* MedicamentDAOext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB602041B1CA00ABEFFD /* MedicamentDAOext.swift */; };
+		ACF5BB622041B1CA00ABEFFD /* MedicamentDAOext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB602041B1CA00ABEFFD /* MedicamentDAOext.swift */; };
 		ACF5BB642041B3CB00ABEFFD /* Prescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB632041B3CB00ABEFFD /* Prescription.swift */; };
 		ACF5BB652041B3CB00ABEFFD /* Prescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB632041B3CB00ABEFFD /* Prescription.swift */; };
 		ACF5BB6A2041BCDA00ABEFFD /* RendezVous.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5BB692041BCDA00ABEFFD /* RendezVous.swift */; };
@@ -71,6 +73,7 @@
 /* Begin PBXFileReference section */
 		30F454A82053513100EACBD9 /* MedicamentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentViewController.swift; sourceTree = "<group>"; };
 		30F454AB2053518500EACBD9 /* MedicamentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentTableViewCell.swift; sourceTree = "<group>"; };
+		7D3063F9205813680032CBF5 /* Medicament.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medicament.swift; path = Model/Medicament.swift; sourceTree = "<group>"; };
 		7D7313C6203B21DB000FD9F7 /* ProjetSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7313C9203B21DC000FD9F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D7313CB203B21DC000FD9F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,7 +96,7 @@
 		ACF5BB542041A96E00ABEFFD /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		ACF5BB572041AC0F00ABEFFD /* Rappel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rappel.swift; sourceTree = "<group>"; };
 		ACF5BB5A2041AE2C00ABEFFD /* Evenement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evenement.swift; sourceTree = "<group>"; };
-		ACF5BB602041B1CA00ABEFFD /* Medicaments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicaments.swift; sourceTree = "<group>"; };
+		ACF5BB602041B1CA00ABEFFD /* MedicamentDAOext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentDAOext.swift; sourceTree = "<group>"; };
 		ACF5BB632041B3CB00ABEFFD /* Prescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prescription.swift; sourceTree = "<group>"; };
 		ACF5BB692041BCDA00ABEFFD /* RendezVous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendezVous.swift; sourceTree = "<group>"; };
 		ACF5BB6C2041BDA700ABEFFD /* Evaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evaluation.swift; sourceTree = "<group>"; };
@@ -127,6 +130,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D3063F8205813510032CBF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7D3063F9205813680032CBF5 /* Medicament.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		7D7313BD203B21DB000FD9F7 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +161,7 @@
 		7D7313C8203B21DB000FD9F7 /* ProjetSwift */ = {
 			isa = PBXGroup;
 			children = (
+				7D3063F8205813510032CBF5 /* Model */,
 				7D9BF6FA2045B66800E631CE /* Controlleur */,
 				7D7313C9203B21DC000FD9F7 /* AppDelegate.swift */,
 				7D7313CD203B21DC000FD9F7 /* Main.storyboard */,
@@ -162,7 +174,7 @@
 				ACF5BB572041AC0F00ABEFFD /* Rappel.swift */,
 				ACF5BB5A2041AE2C00ABEFFD /* Evenement.swift */,
 				7D8372FD20459C9400ECE31B /* EvenementSet.swift */,
-				ACF5BB602041B1CA00ABEFFD /* Medicaments.swift */,
+				ACF5BB602041B1CA00ABEFFD /* MedicamentDAOext.swift */,
 				ACF5BB632041B3CB00ABEFFD /* Prescription.swift */,
 				ACF5BB692041BCDA00ABEFFD /* RendezVous.swift */,
 				ACF5BB6C2041BDA700ABEFFD /* Evaluation.swift */,
@@ -289,7 +301,7 @@
 				};
 			};
 			buildConfigurationList = 7D7313C1203B21DB000FD9F7 /* Build configuration list for PBXProject "ProjetSwift" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -343,11 +355,12 @@
 				7D8373212045A9E900ECE31B /* PrescriptionViewController.swift in Sources */,
 				ACF5BB6A2041BCDA00ABEFFD /* RendezVous.swift in Sources */,
 				30F454A92053513100EACBD9 /* MedicamentViewController.swift in Sources */,
+				7D3063FA205813680032CBF5 /* Medicament.swift in Sources */,
 				ACF5BB642041B3CB00ABEFFD /* Prescription.swift in Sources */,
 				7D7313D2203B21DC000FD9F7 /* ProjetSwift.xcdatamodeld in Sources */,
 				ACF5BB582041AC0F00ABEFFD /* Rappel.swift in Sources */,
 				7D8372FE20459C9400ECE31B /* EvenementSet.swift in Sources */,
-				ACF5BB612041B1CA00ABEFFD /* Medicaments.swift in Sources */,
+				ACF5BB612041B1CA00ABEFFD /* MedicamentDAOext.swift in Sources */,
 				ACF5BB702041BEB500ABEFFD /* Questionnaire.swift in Sources */,
 				7D7313CC203B21DC000FD9F7 /* ViewController.swift in Sources */,
 				ACF5BB552041A96E00ABEFFD /* Contact.swift in Sources */,
@@ -369,9 +382,10 @@
 			files = (
 				ACF5BB6E2041BDA700ABEFFD /* Evaluation.swift in Sources */,
 				30F454AA2053513100EACBD9 /* MedicamentViewController.swift in Sources */,
+				7D3063FB205813680032CBF5 /* Medicament.swift in Sources */,
 				ACF5BB832041C87500ABEFFD /* ExercicePhysique.swift in Sources */,
 				ACF5BB6B2041BCDA00ABEFFD /* RendezVous.swift in Sources */,
-				ACF5BB622041B1CA00ABEFFD /* Medicaments.swift in Sources */,
+				ACF5BB622041B1CA00ABEFFD /* MedicamentDAOext.swift in Sources */,
 				ACF5BB7A2041C53600ABEFFD /* Synthese.swift in Sources */,
 				ACF5BB562041A96E00ABEFFD /* Contact.swift in Sources */,
 				7D8372FF20459C9400ECE31B /* EvenementSet.swift in Sources */,

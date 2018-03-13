@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D102" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Evenements" representedClassName="Evenements" syncable="YES" codeGenerationType="class">
         <relationship name="prescription" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Prescriptions" inverseName="evenement" inverseEntity="Prescriptions" syncable="YES"/>
         <relationship name="rappel" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Rappels" inverseName="evenement" inverseEntity="Rappels" syncable="YES"/>
     </entity>
-    <entity name="Medicaments" representedClassName="Medicaments" syncable="YES" codeGenerationType="class">
+    <entity name="MedicamentDAO" representedClassName="MedicamentDAO" syncable="YES" codeGenerationType="class">
         <attribute name="descript" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dose" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
@@ -20,7 +20,7 @@
         <attribute name="intervalle" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="nomPrescri" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="evenement" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Evenements" inverseName="prescription" inverseEntity="Evenements" syncable="YES"/>
-        <relationship name="medicament" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Medicaments" inverseName="prescription" inverseEntity="Medicaments" syncable="YES"/>
+        <relationship name="medicament" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MedicamentDAO" inverseName="prescription" inverseEntity="MedicamentDAO" syncable="YES"/>
     </entity>
     <entity name="Rappels" representedClassName="Rappels" syncable="YES" codeGenerationType="class">
         <attribute name="dateRappel" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -29,7 +29,7 @@
     </entity>
     <elements>
         <element name="Evenements" positionX="351" positionY="-333" width="128" height="73"/>
-        <element name="Medicaments" positionX="-81" positionY="-370" width="128" height="118"/>
+        <element name="MedicamentDAO" positionX="-81" positionY="-370" width="128" height="120"/>
         <element name="Prescriptions" positionX="135" positionY="-396" width="128" height="180"/>
         <element name="Rappels" positionX="585" positionY="-324" width="128" height="88"/>
     </elements>
