@@ -53,6 +53,21 @@ class ActiviteViewController: UIViewController,UITableViewDataSource, UITableVie
         }
     }
     
+    func delete(activiteWithIndex index: Int)-> Bool {
+        guard let context = self.getContext(errorMsg: "Could not delet activitie") else { return false }
+        let activitie = self.activites[index]
+        context.delete(activitie)
+        do{
+            try context.save()
+            self.activites.remove(at: index)
+            return true
+        }
+        catch let error as NSError{
+        self.alert(error: error)
+        return false
+        }
+    }
+    
     func alertError(errorMsg error:String, userInfo user :String = ""){
         let alert = UIAlertController(title: error, message: user, preferredStyle: .alert )
         let cancelAction = UIAlertAction(title:"Ok", style: .default)
@@ -91,6 +106,21 @@ class ActiviteViewController: UIViewController,UITableViewDataSource, UITableVie
         return cell
         
     }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
+        //Indique si on appelle la fonction pour un effacement de ligne ou non
+        if (editingStyle==UITableViewCellEditingStyle.delete){
+            self.activiteTable.beginUpdates()
+            if self.delete(activiteWithIndex: indexPath.row){
+                self.activiteTable.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            }
+            self.activiteTable.endUpdates()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool{
+        return true
+    }
+    
     //MARK : - Helper Method -
     
     /// Récupère le context d'un Core Data initialisé dans l'application delegate
