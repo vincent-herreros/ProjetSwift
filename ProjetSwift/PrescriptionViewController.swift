@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class PrescriptionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class PrescriptionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     /// Collection de prescriptions affiché dans prescriptionTable
     
@@ -20,6 +20,8 @@ class PrescriptionViewController: UIViewController, UITableViewDataSource, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         // Do any additional setup after loading the view.
         guard let context = getContext(errorMsg: "Could not load data") else{
@@ -60,6 +62,16 @@ class PrescriptionViewController: UIViewController, UITableViewDataSource, UITab
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK: - Picker View Function
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
     }
     
     // MARK: - Table View Data Source protocol -
