@@ -34,62 +34,11 @@ class PrescriptionViewController: UIViewController, UITableViewDataSource, UITab
         }
     }
     
-    /// Appeler quand le bouton "add" est est pressé
-    ///
-    /// Ouvre une boite de dialogue demandant le nom de la prescription
-    /// - Parameter sender: Objet qui fait l'action
-    @IBAction func addPrescription(_ sender: Any) {
-        let alert = UIAlertController(title: "Nouvelle Prescription",
-                                      message: "Ajouter une prescription",
-                                      preferredStyle: .alert)
-        
-        let saveAction = UIAlertAction(title: "Ajouter",
-                                       style: .default)
-        {
-            [unowned self] action in
-            guard let textField = alert.textFields?.first,
-                let nameToSave = textField.text else {
-                    return
-            }
-            self.saveNewPrescription(withName: nameToSave)
-            self.prescriptionTable.reloadData()
-        }
-        
-        let cancelAction = UIAlertAction(title: "Annuler",
-                                         style: .default)
-        
-        alert.addTextField()
-        alert.addAction(saveAction)
-        alert.addAction(cancelAction)
-        
-        present(alert, animated: true)
-    }
-    
-    // MARK: - Prescriptions data management -
-    
-    /// Creer une nouvelle prescription, la sauvegarde et l'ajoute à la collection
-    ///
-    /// - Parameter name: Nom de la prescription
-    func saveNewPrescription(withName name: String){
-       guard let context = self.getContext(errorMsg: "Save failed") else{
-            return
-        }
-        let prescription = Prescriptions(context: context)
-        prescription.nomPrescri = name
-        do{
-            try context.save()
-            self.prescriptions.append(prescription)
-        }
-        catch let error as NSError{
-            self.alert(error: error)
-            return
-        }
-    }
     
     /// Enelve une prescription de la collection à l'index indiqué
     ///
     /// - Preconditions: L'index doit appartenir à la collection
-    /// - Parameter prescriptionWithIndex:Index de la personne à supprimer
+    /// - Parameter prescriptionWithIndex:Index de la prescription à supprimer
     /// - Returns: True, si la suppression est faite, sinon false
     func delete(prescriptionWithIndex index: Int) -> Bool{
         guard let context = getContext(errorMsg: "Could not delete Prescription") else {
