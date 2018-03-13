@@ -18,10 +18,15 @@ class PrescriptionViewController: UIViewController, UITableViewDataSource, UITab
     
     @IBOutlet weak var prescriptionTable: UITableView!
     
+    @IBOutlet weak var pickerMedicament: UIPickerView!
+    
+    var pickerData : [Medicaments] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        pickerMedicament.delegate = self
+        pickerMedicament.dataSource = self
         
         // Do any additional setup after loading the view.
         guard let context = getContext(errorMsg: "Could not load data") else{
@@ -30,6 +35,14 @@ class PrescriptionViewController: UIViewController, UITableViewDataSource, UITab
         let request : NSFetchRequest<Prescriptions> = Prescriptions.fetchRequest()
         do{
             try self.prescriptions = context.fetch(request)
+        }
+        catch let error as NSError{
+            self.alert(error: error)
+        }
+        //Load pickerData
+        request : NSFetchRequest<Medicaments> = Medicaments.fetchRequest()
+        do{
+            try self.pickerData = context.fetch(request)
         }
         catch let error as NSError{
             self.alert(error: error)
@@ -67,11 +80,15 @@ class PrescriptionViewController: UIViewController, UITableViewDataSource, UITab
     //MARK: - Picker View Function
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        
+        return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        
+        return pickerData.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row].nom
     }
     
     // MARK: - Table View Data Source protocol -
